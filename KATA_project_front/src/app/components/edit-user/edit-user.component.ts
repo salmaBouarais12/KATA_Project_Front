@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { configEndpointsApi } from '../api/config-endpoints-api';
+import { configEndpointsApi } from '../../api/config-endpoints-api';
 
 @Component({
   selector: 'app-edit-user',
