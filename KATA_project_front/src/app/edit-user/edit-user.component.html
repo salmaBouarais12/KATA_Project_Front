@@ -1,1 +1,15 @@
-<p>edit-user works!</p>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:700,600' rel='stylesheet' type='text/css'>
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+<div class="box">
+<h1>Edit Information Of User</h1>
+<fieldset>
+  <input id="firstName" name="firstName" formControlName="firstName" placeholder="FirstName" autofocus="" required=""/>
+  <input id="firstName" name="lastName" formControlName="lastName" placeholder="FirstName" autofocus="" required=""/>
+  <div class="btn"><button class="btnSubmit" type="submit" [disabled]="userForm.invalid || !userForm.dirty">Submit</button>
+ <a href="#"><button id="btnBack">Back</button></a></div>
+</fieldset>
+</div>
+</form>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+

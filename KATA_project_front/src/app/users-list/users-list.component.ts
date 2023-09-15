@@ -26,7 +26,6 @@ export class UsersListComponent implements OnInit{
   }
 
   editUser(user : any){
-    console.log("edit user", user)
     this.router.navigateByUrl("/edit-user/" + user.id)
   }
 }
