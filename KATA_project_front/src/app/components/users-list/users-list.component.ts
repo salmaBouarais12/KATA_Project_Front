@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
+import { User } from 'src/app/domain/user';
 
 @Component({
   selector: 'app-users-list',
@@ -8,7 +9,7 @@ import { UserService } from '../../services/user.service';
   styleUrls: ['./users-list.component.css']
 })
 export class UsersListComponent implements OnInit{
-  users: any[] = [];
+  users: User[] = [];
 
   constructor(private userService: UserService, private router: Router) { }
   ngOnInit(): void {
@@ -23,7 +24,7 @@ export class UsersListComponent implements OnInit{
       });
   }
 
-  editUser(user : any){
+  editUser(user : User){
     this.router.navigateByUrl("/edit-user/" + user.id)
   }
 }

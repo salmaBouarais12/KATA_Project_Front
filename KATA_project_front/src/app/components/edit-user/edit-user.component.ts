@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -12,7 +11,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class EditUserComponent implements OnInit {
   userForm: FormGroup;
-  user : any;
+  user!: User;
 
   constructor(private activatedRoute: ActivatedRoute,
     private userService: UserService,
