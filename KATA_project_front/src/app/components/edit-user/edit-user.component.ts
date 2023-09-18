@@ -28,6 +28,17 @@ export class EditUserComponent implements OnInit {
     this.loadUser();
   }
 
+  loadUser() {
+    const id = this.activatedRoute.snapshot.params['id'];
+    this.userService.getUserById(id).subscribe((data: User) => {
+      this.user = data;
+      this.userForm.patchValue({
+        firstName: this.user.firstName,
+        lastName: this.user.lastName,
+      })
+    });
+  }
+
   onSubmit() {
     if (this.userForm.valid) {
       const user: User = {
@@ -39,16 +50,5 @@ export class EditUserComponent implements OnInit {
         this.router.navigateByUrl("users");
       });
     }
-  }
-
-  loadUser() {
-    const id = this.activatedRoute.snapshot.params['id'];
-    this.userService.getUserById(id).subscribe((data: User) => {
-      this.user = data;
-      this.userForm.patchValue({
-        firstName: this.user.firstName,
-        lastName: this.user.lastName,
-      })
-    });
   }
 }

@@ -27,7 +27,11 @@ export class UserService {
   editUser(user: User) : Observable<User> {
     return this.http.put<UserResponse>(configEndpointsApi.endpoints.users.edit + user.id, {
       ...user,
-    })
+    });
+  }
+
+  deleteUser(user: User) : Observable<User> {
+    return this.http.delete<UserResponse>(configEndpointsApi.endpoints.users.edit + user.id);
   }
   
   mapUsersResponseToUsers(response: UsersResponse): User[] {
