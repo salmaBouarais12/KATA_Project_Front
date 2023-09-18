@@ -4,6 +4,8 @@ import { User } from '../domain/user';
 import { HttpClient } from '@angular/common/http';
 import { configEndpointsApi } from '../api/config-endpoints-api';
 import { UsersResponse } from './dtos/UsersResponse';
+import { UserResponse } from './dtos/UserResponse';
+import { FormGroup } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +20,16 @@ export class UserService {
       .pipe(map(this.mapUsersResponseToUsers));
   }
 
+  getUserById(id : number): Observable<User> {
+    return this.http.get<UserResponse>(configEndpointsApi.endpoints.users.read + "/" + id);
+  }
+
+  editUser(user: User) : Observable<User> {
+    return this.http.put<UserResponse>(configEndpointsApi.endpoints.users.edit + user.id, {
+      ...user,
+    })
+  }
+  
   mapUsersResponseToUsers(response: UsersResponse): User[] {
     return response.persons.map(p => ({
       id: p.id,
