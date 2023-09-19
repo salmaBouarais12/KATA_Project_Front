@@ -20,14 +20,17 @@ export class UsersListComponent implements OnInit{
 
   loadUsers() {
     this.userService.getUsers()
-      .subscribe(users => { // Subscribing to the Observable
-        console.log("data", users);  // Logging the response data
+      .subscribe(users => {
         this.users = users;
       });
   }
 
   editUser(user : User){
     this.router.navigateByUrl("/edit-user/" + user.id)
+  }
+
+  addUser(){
+    this.router.navigateByUrl("/add-user")
   }
 
   deleteUser(user: User) {

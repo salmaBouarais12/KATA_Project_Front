@@ -24,6 +24,12 @@ export class UserService {
     return this.http.get<UserResponse>(configEndpointsApi.endpoints.users.read + "/" + id);
   }
 
+  addUser(user: User) : Observable<User> {
+    return this.http.post<UserResponse>(configEndpointsApi.endpoints.users.read, {
+      ...user,
+    });
+  }
+
   editUser(user: User) : Observable<User> {
     return this.http.put<UserResponse>(configEndpointsApi.endpoints.users.edit + user.id, {
       ...user,

@@ -3,14 +3,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { UsersListComponent } from './components/users-list/users-list.component';
-import { EditUserComponent } from './components/edit-user/edit-user.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { AddUserComponent } from './components/add-user/add-user.component';
+import { HeaderComponent } from './header/header.component';
+import { RoomsListComponent } from './components/rooms-list/rooms-list.component';
+import { EditUserComponent } from './components/edit-user/edit-user.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { MatButtonModule } from '@angular/material/button';
     HeaderComponent,
     UsersListComponent,
     EditUserComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    AddUserComponent,
+    RoomsListComponent
   ],
   imports: [
     BrowserModule,
