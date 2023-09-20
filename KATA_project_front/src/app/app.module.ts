@@ -15,6 +15,9 @@ import { RoomsListComponent } from './components/rooms-list/rooms-list.component
 import { EditUserComponent } from './components/edit-user/edit-user.component';
 import { EditRoomComponent } from './components/edit-room/edit-room.component';
 import { AddRoomComponent } from './components/add-room/add-room.component';
+import { BookingsListComponent } from './components/bookings-list/bookings-list.component';
+import { EditBookingComponent } from './components/edit-booking/edit-booking.component';
+import { AddBookingComponent } from './components/add-booking/add-booking.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { AddRoomComponent } from './components/add-room/add-room.component';
     AddUserComponent,
     RoomsListComponent,
     EditRoomComponent,
-    AddRoomComponent
+    AddRoomComponent,
+    BookingsListComponent,
+    EditBookingComponent,
+    AddBookingComponent
   ],
   imports: [
     BrowserModule,

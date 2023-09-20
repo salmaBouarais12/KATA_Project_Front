@@ -6,6 +6,9 @@ import { EditUserComponent } from './components/edit-user/edit-user.component';
 import { RoomsListComponent } from './components/rooms-list/rooms-list.component';
 import { EditRoomComponent } from './components/edit-room/edit-room.component';
 import { AddRoomComponent } from './components/add-room/add-room.component';
+import { BookingsListComponent } from './components/bookings-list/bookings-list.component';
+import { EditBookingComponent } from './components/edit-booking/edit-booking.component';
+import { AddBookingComponent } from './components/add-booking/add-booking.component';
 
 const routes: Routes = [
   {
@@ -25,6 +28,15 @@ const routes: Routes = [
   },
   {
     path: "add-room", component: AddRoomComponent
+  },
+  {
+    path: "bookings", component: BookingsListComponent
+  },
+  {
+    path: "edit-booking/:id", component: EditBookingComponent
+  },
+  {
+    path: "add-booking", component: AddBookingComponent
   }
 ];
 

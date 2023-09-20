@@ -7,6 +7,10 @@ export const configEndpointsApi = {
       rooms:{
         read: "http://localhost:5262/api/rooms",
         edit: "http://localhost:5262/api/rooms/"
+      },
+      bookings:{
+        read: "http://localhost:5262/api/bookings",
+        edit: "http://localhost:5262/api/bookings/"
       }
     }
 }
