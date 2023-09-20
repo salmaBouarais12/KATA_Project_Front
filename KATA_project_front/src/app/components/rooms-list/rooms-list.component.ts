@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Room } from 'src/app/domain/room';
 import { RoomService } from 'src/app/services/room.service';
+import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-rooms-list',
@@ -25,4 +26,22 @@ export class RoomsListComponent implements OnInit{
       });
   }
 
+  editRoom(room : Room){
+    this.router.navigateByUrl("/edit-room/" + room.id);
+  }
+
+  addRoom(){
+    this.router.navigateByUrl("/add-room");
+  }
+
+  deleteUser(room: Room) {
+    const dialogRef = this.dialog.open(ConfirmDialogComponent);
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        this.roomService.deleteRoom(room).subscribe(() => {
+          this.router.navigateByUrl('');
+        });
+      }
+    });
+  }
 }

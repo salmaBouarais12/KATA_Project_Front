@@ -13,6 +13,8 @@ import { AddUserComponent } from './components/add-user/add-user.component';
 import { HeaderComponent } from './header/header.component';
 import { RoomsListComponent } from './components/rooms-list/rooms-list.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
+import { EditRoomComponent } from './components/edit-room/edit-room.component';
+import { AddRoomComponent } from './components/add-room/add-room.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { EditUserComponent } from './components/edit-user/edit-user.component';
     EditUserComponent,
     ConfirmDialogComponent,
     AddUserComponent,
-    RoomsListComponent
+    RoomsListComponent,
+    EditRoomComponent,
+    AddRoomComponent
   ],
   imports: [
     BrowserModule,

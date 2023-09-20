@@ -5,7 +5,8 @@ export const configEndpointsApi = {
         edit:"http://localhost:5262/api/persons/"
       },
       rooms:{
-        read: "http://localhost:5262/api/rooms"
+        read: "http://localhost:5262/api/rooms",
+        edit: "http://localhost:5262/api/rooms/"
       }
     }
 }

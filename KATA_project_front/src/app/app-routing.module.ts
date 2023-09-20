@@ -4,6 +4,8 @@ import { UsersListComponent } from './components/users-list/users-list.component
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
 import { RoomsListComponent } from './components/rooms-list/rooms-list.component';
+import { EditRoomComponent } from './components/edit-room/edit-room.component';
+import { AddRoomComponent } from './components/add-room/add-room.component';
 
 const routes: Routes = [
   {
@@ -17,6 +19,12 @@ const routes: Routes = [
   },
   {
     path : 'rooms',component : RoomsListComponent
+  },
+  {
+    path: "edit-room/:id", component: EditRoomComponent
+  },
+  {
+    path: "add-room", component: AddRoomComponent
   }
 ];
 
