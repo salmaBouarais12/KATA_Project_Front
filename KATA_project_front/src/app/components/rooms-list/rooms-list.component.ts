@@ -34,7 +34,7 @@ export class RoomsListComponent implements OnInit{
     this.router.navigateByUrl("/add-room");
   }
 
-  deleteUser(room: Room) {
+  deleteRoom(room: Room) {
     const dialogRef = this.dialog.open(ConfirmDialogComponent);
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
