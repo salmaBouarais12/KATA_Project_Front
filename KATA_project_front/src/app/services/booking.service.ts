@@ -22,8 +22,18 @@ export class BookingService {
     return this.http.get<BookingResponse>(configEndpointsApi.endpoints.bookings.read + "/" + id);
   }
 
+  addBooking(booking: Booking) : Observable<Booking> {
+    return this.http.post<BookingResponse>(configEndpointsApi.endpoints.bookings.read, {
+      ...booking,
+    });
+  }
+
   deleteBooking(booking: Booking) : Observable<Booking> {
     return this.http.delete<BookingResponse>(configEndpointsApi.endpoints.bookings.edit + booking.id);
+  }
+
+  getBookingsForRoom(roomId: number): Observable<Booking[]> {
+    return this.http.get<Booking[]>(configEndpointsApi.endpoints.bookings.read + "/" + roomId);
   }
 
   mapBookingsResponseToBookings(response: BookingsResponse): Booking[] {
