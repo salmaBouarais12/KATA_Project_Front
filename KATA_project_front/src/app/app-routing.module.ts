@@ -33,9 +33,6 @@ const routes: Routes = [
     path: "bookings", component: BookingsListComponent
   },
   {
-    path: "edit-booking/:id", component: EditBookingComponent
-  },
-  {
     path: "add-booking", component: AddBookingComponent
   }
 ];

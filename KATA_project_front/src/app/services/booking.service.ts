@@ -33,7 +33,7 @@ export class BookingService {
   }
 
   getBookingsForRoom(roomId: number): Observable<Booking[]> {
-    return this.http.get<Booking[]>(configEndpointsApi.endpoints.bookings.read + "/" + roomId);
+    return this.http.get<Booking[]>(configEndpointsApi.endpoints.bookings.readBookingForRoom + roomId);
   }
 
   mapBookingsResponseToBookings(response: BookingsResponse): Booking[] {

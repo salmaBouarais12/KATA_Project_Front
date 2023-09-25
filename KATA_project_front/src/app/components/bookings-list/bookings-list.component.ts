@@ -32,10 +32,6 @@ export class BookingsListComponent implements OnInit{
     this.router.navigateByUrl("/add-booking");
   }
 
-  editBooking(booking : Booking){
-    this.router.navigateByUrl("/edit-booking/" + booking.id);
-  }
-
   deleteBooking(booking: Booking) {
     const dialogRef = this.dialog.open(ConfirmDialogComponent);
     dialogRef.afterClosed().subscribe((result) => {
