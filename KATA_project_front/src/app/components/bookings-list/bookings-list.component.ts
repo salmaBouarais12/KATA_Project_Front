@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Booking } from 'src/app/domain/booking';
 import { BookingService } from 'src/app/services/booking.service';
 import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-bookings-list',
@@ -13,7 +14,8 @@ import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.compone
 export class BookingsListComponent implements OnInit{
   bookings: Booking[] = [];
 
-  constructor(private bookingService: BookingService, private router: Router,private dialog: MatDialog) { }
+  constructor(private bookingService: BookingService,private datePipe: DatePipe,
+    private router: Router,private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.loadBookings();

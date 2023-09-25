@@ -18,6 +18,7 @@ import { AddRoomComponent } from './components/add-room/add-room.component';
 import { BookingsListComponent } from './components/bookings-list/bookings-list.component';
 import { EditBookingComponent } from './components/edit-booking/edit-booking.component';
 import { AddBookingComponent } from './components/add-booking/add-booking.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,7 @@ import { AddBookingComponent } from './components/add-booking/add-booking.compon
     MatDialogModule,
     MatButtonModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -22,7 +22,7 @@
             <tr *ngFor="let booking of bookings" class="active">
               <td>{{booking.roomId}}</td>
               <td>{{booking.personId}}</td>
-              <td>{{booking.bookingDate}}</td>
+              <td>{{booking.bookingDate | date: 'yyyy-MM-dd'}}</td>
               <td>{{booking.startSlot}}</td>
               <td>{{booking.endSlot}}</td>
               <td>
